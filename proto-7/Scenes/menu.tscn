@@ -1,0 +1,223 @@
+[gd_scene format=3 uid="uid://ulatnymauvlm"]
+
+[ext_resource type="Texture2D" uid="uid://crx4pu7qy1fk3" path="res://Assets/UI/BG.png" id="1_cayip"]
+[ext_resource type="Texture2D" uid="uid://s6k1hbffdoam" path="res://Assets/UI/9patch.png" id="2_158mb"]
+[ext_resource type="Texture2D" uid="uid://bnei4ypkenfbq" path="res://Assets/UI/title.png" id="3_wwsa2"]
+[ext_resource type="FontFile" uid="uid://cheb4421epahe" path="res://Assets/Fonts/ChicagoKare-Regular.ttf" id="4_158mb"]
+[ext_resource type="Texture2D" uid="uid://43m05v1eldb1" path="res://Assets/UI/textbox.png" id="5_wwsa2"]
+[ext_resource type="Script" path="res://Scripts/menu_controller.gd" id="6_menu"]
+[ext_resource type="Texture2D" uid="uid://bbumtrgqg2nw5" path="res://Assets/UI/restart.png" id="7_restart"]
+[ext_resource type="Texture2D" uid="uid://df5krr6sjg51o" path="res://Assets/UI/fullscreen.png" id="8_fullscreen"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_difficulty"]
+size = Vector2(212, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_utility"]
+size = Vector2(40, 40)
+
+[node name="Node2D" type="Node2D" unique_id=1146537970]
+script = ExtResource("6_menu")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1789682723]
+position = Vector2(360, 360)
+texture = ExtResource("1_cayip")
+
+[node name="Control" type="Control" parent="." unique_id=820936271]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control" unique_id=516636265]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 68.0
+offset_right = 647.0
+offset_bottom = 655.0
+texture = ExtResource("2_158mb")
+patch_margin_left = 1
+patch_margin_top = 25
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/NinePatchRect" unique_id=551200825]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 34.0
+offset_right = 511.0
+offset_bottom = 370.0
+texture = ExtResource("3_wwsa2")
+
+[node name="Label" type="Label" parent="Control/NinePatchRect" unique_id=898777590]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -323.0
+offset_right = 323.0
+offset_bottom = 14.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.243, 0.243, 0.243, 1)
+theme_override_fonts/font = ExtResource("4_158mb")
+theme_override_font_sizes/font_size = 24
+text = "Stephen Rubino's Spring Training Simulator"
+horizontal_alignment = 1
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="Control" unique_id=386849200]
+layout_mode = 0
+offset_left = 276.0
+offset_top = 461.0
+offset_right = 488.0
+offset_bottom = 511.0
+texture = ExtResource("5_wwsa2")
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="Label" type="Label" parent="Control/NinePatchRect2" unique_id=1032429148]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.0
+offset_top = -18.0
+offset_right = 34.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.24313726, 0.24313726, 0.24313726, 1)
+theme_override_fonts/font = ExtResource("4_158mb")
+theme_override_font_sizes/font_size = 36
+text = "Easy"
+
+[node name="TouchButton" type="TouchScreenButton" parent="Control/NinePatchRect2" unique_id=1077087336]
+position = Vector2(106, 25)
+shape = SubResource("RectangleShape2D_difficulty")
+
+[node name="NinePatchRect3" type="NinePatchRect" parent="Control" unique_id=1352917052]
+layout_mode = 0
+offset_left = 276.0
+offset_top = 520.0
+offset_right = 488.0
+offset_bottom = 570.0
+texture = ExtResource("5_wwsa2")
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="Label" type="Label" parent="Control/NinePatchRect3" unique_id=882486479]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.5
+offset_top = -18.0
+offset_right = 58.5
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.24313726, 0.24313726, 0.24313726, 1)
+theme_override_fonts/font = ExtResource("4_158mb")
+theme_override_font_sizes/font_size = 36
+text = "Medium"
+
+[node name="TouchButton" type="TouchScreenButton" parent="Control/NinePatchRect3" unique_id=486468520]
+position = Vector2(106, 25)
+shape = SubResource("RectangleShape2D_difficulty")
+
+[node name="NinePatchRect4" type="NinePatchRect" parent="Control" unique_id=250703016]
+layout_mode = 0
+offset_left = 276.0
+offset_top = 579.0
+offset_right = 488.0
+offset_bottom = 629.0
+texture = ExtResource("5_wwsa2")
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="Label" type="Label" parent="Control/NinePatchRect4" unique_id=1024638473]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -18.0
+offset_right = 35.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.24313726, 0.24313726, 0.24313726, 1)
+theme_override_fonts/font = ExtResource("4_158mb")
+theme_override_font_sizes/font_size = 36
+text = "Hard"
+
+[node name="TouchButton" type="TouchScreenButton" parent="Control/NinePatchRect4" unique_id=39336740]
+position = Vector2(106, 25)
+shape = SubResource("RectangleShape2D_difficulty")
+
+[node name="RestartButton" type="TextureRect" parent="." unique_id=1850608855]
+z_index = 10
+offset_left = 22.0
+offset_top = 647.0
+offset_right = 62.0
+offset_bottom = 687.0
+texture = ExtResource("7_restart")
+stretch_mode = 3
+
+[node name="TouchButton" type="TouchScreenButton" parent="RestartButton" unique_id=1703046294]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_utility")
+action = "R"
+
+[node name="FullscreenButton" type="TextureRect" parent="." unique_id=795300484]
+z_index = 10
+offset_left = 22.0
+offset_top = 603.0
+offset_right = 62.0
+offset_bottom = 643.0
+texture = ExtResource("8_fullscreen")
+stretch_mode = 3
+
+[node name="TouchButton" type="TouchScreenButton" parent="FullscreenButton" unique_id=2051239391]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_utility")
+action = "F"
+
+[node name="NinePatchRect4" type="NinePatchRect" parent="." unique_id=1460325184]
+offset_left = 412.0
+offset_top = 676.0
+offset_right = 667.0
+offset_bottom = 706.0
+texture = ExtResource("5_wwsa2")
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="Label" type="Label" parent="NinePatchRect4" unique_id=949716598]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -124.5
+offset_top = -6.0
+offset_right = 125.5
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.24313726, 0.24313726, 0.24313726, 1)
+theme_override_fonts/font = ExtResource("4_158mb")
+theme_override_font_sizes/font_size = 16
+text = "© Stephen Rubino Software LLC, 1987"

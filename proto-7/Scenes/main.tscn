@@ -1,0 +1,1509 @@
+[gd_scene format=3 uid="uid://dday4onomxhqg"]
+
+[ext_resource type="Texture2D" uid="uid://crx4pu7qy1fk3" path="res://Assets/UI/BG.png" id="1_jjgbg"]
+[ext_resource type="Texture2D" uid="uid://bn2helox6cwsh" path="res://Assets/Animations/pitcher_idle.png" id="3_8gbba"]
+[ext_resource type="FontFile" uid="uid://t2uptqs5ib1s" path="res://Assets/Fonts/pixChicago.ttf" id="3_344ge"]
+[ext_resource type="Texture2D" uid="uid://drn0euuxc5h1a" path="res://Assets/Animations/pitch_13.png" id="4_jjvhh"]
+[ext_resource type="Texture2D" uid="uid://derf5ukkm5n7t" path="res://Assets/Animations/batter_idle.png" id="5_21xkr"]
+[ext_resource type="FontFile" uid="uid://cheb4421epahe" path="res://Assets/Fonts/ChicagoKare-Regular.ttf" id="5_k12tt"]
+[ext_resource type="Texture2D" uid="uid://cyyvhup7qfyai" path="res://Assets/Animations/batter_9.png" id="6_6bp64"]
+[ext_resource type="Texture2D" uid="uid://s6k1hbffdoam" path="res://Assets/UI/9patch.png" id="7_6bp64"]
+[ext_resource type="Texture2D" uid="uid://bp57wfdncyspd" path="res://Assets/Sprites/mound.png" id="8_ynf5e"]
+[ext_resource type="Script" uid="uid://dyrxuu74luhrr" path="res://Scripts/game_manager.gd" id="9_manager"]
+[ext_resource type="Script" uid="uid://r8h12aaq78c8" path="res://Scripts/pitch_controller.gd" id="10_pitch"]
+[ext_resource type="Texture2D" uid="uid://c0je78ilpkrfm" path="res://Assets/Sprites/ball.png" id="11_ball"]
+[ext_resource type="Texture2D" uid="uid://bcel16r62fekk" path="res://Assets/UI/base_empty.png" id="12_fdnlq"]
+[ext_resource type="Texture2D" uid="uid://cjredoxayyuhj" path="res://Assets/UI/out_empty.png" id="13_jkdf5"]
+[ext_resource type="Texture2D" uid="uid://calg71ui610y0" path="res://Assets/Sprites/field.png" id="14_jkdf5"]
+[ext_resource type="Script" uid="uid://ctdgnjkjxxvus" path="res://Scripts/field_controller.gd" id="15_field"]
+[ext_resource type="Texture2D" uid="uid://vpyfla668v3" path="res://Assets/UI/run_path.png" id="17_h1bgf"]
+[ext_resource type="Script" uid="uid://cqh725446oqe0" path="res://Scripts/run_controller.gd" id="18_run"]
+[ext_resource type="Script" uid="uid://by54vi867hvi5" path="res://Scripts/announcement_controller.gd" id="19_announcements"]
+[ext_resource type="Texture2D" uid="uid://43m05v1eldb1" path="res://Assets/UI/textbox.png" id="19_hibaj"]
+[ext_resource type="Script" uid="uid://c7l7yc5t5e8xy" path="res://Scripts/audio_manager.gd" id="20_audio"]
+[ext_resource type="Texture2D" uid="uid://bp7dovgnliah5" path="res://Assets/UI/scorecard.png" id="21_kqrg6"]
+[ext_resource type="Texture2D" uid="uid://bjmwfkerv8nus" path="res://Assets/UI/swing_input.png" id="21_ueoa1"]
+[ext_resource type="AudioStream" uid="uid://bu2rwauhp4sle" path="res://Assets/Audio/crowdcheer.mp3" id="22_gt3je"]
+[ext_resource type="AudioStream" uid="uid://c2u5pt05deklx" path="res://Assets/Audio/crowd_whoa.mp3" id="23_gt3je"]
+[ext_resource type="AudioStream" uid="uid://ip61t6y3ml0" path="res://Assets/Audio/homeruncheer.mp3" id="24_home_cheer"]
+[ext_resource type="AudioStream" uid="uid://b10umsnt7wvtq" path="res://Assets/Audio/hitcheer.mp3" id="25_hit_cheer"]
+[ext_resource type="AudioStream" uid="uid://cf4ox48p4ah8n" path="res://Assets/Audio/crowdbaseline.mp3" id="26_crowd"]
+[ext_resource type="Texture2D" uid="uid://crgym25tugtni" path="res://Assets/UI/run_input.png" id="28_6vcvc"]
+[ext_resource type="Texture2D" uid="uid://rib8kmi42cwe" path="res://Assets/UI/leftarrow.png" id="29_e08e2"]
+[ext_resource type="Texture2D" uid="uid://u16usbhdob45" path="res://Assets/UI/rightarrow.png" id="30_neg2b"]
+[ext_resource type="Texture2D" uid="uid://d3u13nbgrk3n6" path="res://Assets/UI/pitchline.png" id="31_r33sp"]
+[ext_resource type="Texture2D" uid="uid://cpsk6ff3j80rr" path="res://Assets/UI/pitchslider.png" id="32_hdf80"]
+[ext_resource type="Texture2D" uid="uid://bkchui0ucj7wx" path="res://Assets/UI/arrowdown.png" id="33_jwpg7"]
+[ext_resource type="Script" uid="uid://bh8booj5vbbm4" path="res://Scripts/player_pitch_controller.gd" id="34_player_pitch"]
+[ext_resource type="AudioStream" uid="uid://cppcrrys77kcy" path="res://Assets/Audio/goodtry.mp3" id="35_good_try"]
+[ext_resource type="Texture2D" uid="uid://blj7u7hshik4l" path="res://Assets/UI/pitch_input.png" id="36_hdf80"]
+[ext_resource type="Texture2D" uid="uid://cj4a0gttusqyq" path="res://Assets/Animations/fielder_9.png" id="37_jwpg7"]
+[ext_resource type="Texture2D" uid="uid://ul1vinm3k5eu" path="res://Assets/Sprites/grassline.png" id="38_k2e45"]
+[ext_resource type="Script" uid="uid://c3jlg7ky6f4xj" path="res://Scripts/catch_controller.gd" id="39_catch"]
+[ext_resource type="Texture2D" uid="uid://cxlsyh0mq4mn3" path="res://Assets/UI/catch_input.png" id="40_aqgau"]
+[ext_resource type="Texture2D" uid="uid://c4cpmidmgputc" path="res://Assets/Animations/catcher_2.png" id="41_8cuat"]
+[ext_resource type="Texture2D" uid="uid://d02ay1bh18dkh" path="res://Assets/Animations/passer_6.png" id="42_o1aky"]
+[ext_resource type="Script" uid="uid://deupiq7gicvmm" path="res://Scripts/pass_controller.gd" id="43_pass"]
+[ext_resource type="Texture2D" uid="uid://b4m6x7ykcwegw" path="res://Assets/UI/pass_input.png" id="44_pass_input"]
+[ext_resource type="Texture2D" uid="uid://bbumtrgqg2nw5" path="res://Assets/UI/restart.png" id="46_s8vy0"]
+[ext_resource type="Texture2D" uid="uid://df5krr6sjg51o" path="res://Assets/UI/fullscreen.png" id="47_jut3y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fevyy"]
+atlas = ExtResource("5_21xkr")
+region = Rect2(0, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hibaj"]
+atlas = ExtResource("5_21xkr")
+region = Rect2(36, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pdsj5"]
+atlas = ExtResource("6_6bp64")
+region = Rect2(0, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ee4r6"]
+atlas = ExtResource("6_6bp64")
+region = Rect2(36, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gt3je"]
+atlas = ExtResource("6_6bp64")
+region = Rect2(72, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pmx8"]
+atlas = ExtResource("6_6bp64")
+region = Rect2(108, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u50mg"]
+atlas = ExtResource("6_6bp64")
+region = Rect2(144, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cbgmd"]
+atlas = ExtResource("6_6bp64")
+region = Rect2(180, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1w6v2"]
+atlas = ExtResource("6_6bp64")
+region = Rect2(216, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ueoa1"]
+atlas = ExtResource("6_6bp64")
+region = Rect2(252, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6vcvc"]
+atlas = ExtResource("6_6bp64")
+region = Rect2(288, 0, 36, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7k868"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fevyy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hibaj")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pdsj5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ee4r6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gt3je")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pmx8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u50mg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cbgmd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1w6v2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ueoa1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6vcvc")
+}],
+"loop": false,
+"name": &"swing",
+"speed": 20.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jjvhh"]
+atlas = ExtResource("3_8gbba")
+region = Rect2(0, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kry3j"]
+atlas = ExtResource("3_8gbba")
+region = Rect2(36, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_21xkr"]
+atlas = ExtResource("4_jjvhh")
+region = Rect2(0, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6bp64"]
+atlas = ExtResource("4_jjvhh")
+region = Rect2(36, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_344ge"]
+atlas = ExtResource("4_jjvhh")
+region = Rect2(72, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ynf5e"]
+atlas = ExtResource("4_jjvhh")
+region = Rect2(108, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hptm8"]
+atlas = ExtResource("4_jjvhh")
+region = Rect2(144, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d1ilt"]
+atlas = ExtResource("4_jjvhh")
+region = Rect2(180, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6iyac"]
+atlas = ExtResource("4_jjvhh")
+region = Rect2(216, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdnlq"]
+atlas = ExtResource("4_jjvhh")
+region = Rect2(252, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jkdf5"]
+atlas = ExtResource("4_jjvhh")
+region = Rect2(288, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wsu2k"]
+atlas = ExtResource("4_jjvhh")
+region = Rect2(324, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k12tt"]
+atlas = ExtResource("4_jjvhh")
+region = Rect2(360, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h1bgf"]
+atlas = ExtResource("4_jjvhh")
+region = Rect2(396, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b3802"]
+atlas = ExtResource("4_jjvhh")
+region = Rect2(432, 0, 36, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_21xkr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jjvhh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kry3j")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_21xkr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6bp64")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_344ge")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ynf5e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hptm8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d1ilt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6iyac")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fdnlq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jkdf5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wsu2k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k12tt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h1bgf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b3802")
+}],
+"loop": false,
+"name": &"pitch",
+"speed": 10.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7k868"]
+atlas = ExtResource("21_ueoa1")
+region = Rect2(0, 0, 137, 91)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hpc6h"]
+atlas = ExtResource("21_ueoa1")
+region = Rect2(137, 0, 137, 91)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kltya"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7k868")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hpc6h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_swing_input"]
+size = Vector2(116, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_arrow_input"]
+size = Vector2(80, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_space_input"]
+size = Vector2(96, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2e45"]
+atlas = ExtResource("37_jwpg7")
+region = Rect2(0, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_536cc"]
+atlas = ExtResource("37_jwpg7")
+region = Rect2(36, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aqgau"]
+atlas = ExtResource("37_jwpg7")
+region = Rect2(72, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8cuat"]
+atlas = ExtResource("37_jwpg7")
+region = Rect2(108, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o1aky"]
+atlas = ExtResource("37_jwpg7")
+region = Rect2(144, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwxat"]
+atlas = ExtResource("37_jwpg7")
+region = Rect2(180, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aa8k8"]
+atlas = ExtResource("37_jwpg7")
+region = Rect2(216, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kqrg6"]
+atlas = ExtResource("37_jwpg7")
+region = Rect2(252, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwwfm"]
+atlas = ExtResource("37_jwpg7")
+region = Rect2(288, 0, 36, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s8vy0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2e45")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_536cc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aqgau")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8cuat")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o1aky")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kwxat")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aa8k8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kqrg6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nwwfm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_catch_input"]
+size = Vector2(128, 300)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_catch_arrow_input"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pass_input"]
+size = Vector2(648, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s8vy0"]
+atlas = ExtResource("41_8cuat")
+region = Rect2(0, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jut3y"]
+atlas = ExtResource("41_8cuat")
+region = Rect2(36, 0, 36, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v2nl5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s8vy0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jut3y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v2nl5"]
+atlas = ExtResource("42_o1aky")
+region = Rect2(0, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmskm"]
+atlas = ExtResource("42_o1aky")
+region = Rect2(36, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xdkp6"]
+atlas = ExtResource("42_o1aky")
+region = Rect2(72, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_54nrm"]
+atlas = ExtResource("42_o1aky")
+region = Rect2(108, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_55jeb"]
+atlas = ExtResource("42_o1aky")
+region = Rect2(144, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gsvbx"]
+atlas = ExtResource("42_o1aky")
+region = Rect2(180, 0, 36, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bv80c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v2nl5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dmskm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xdkp6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_54nrm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_55jeb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gsvbx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_utility_button"]
+size = Vector2(40, 40)
+
+[node name="Main" type="Node2D" unique_id=1001308781]
+script = ExtResource("9_manager")
+
+[node name="AudioManager" type="Node" parent="." unique_id=1351998485]
+script = ExtResource("20_audio")
+
+[node name="CrowdA" type="AudioStreamPlayer" parent="AudioManager" unique_id=401362755]
+stream = ExtResource("26_crowd")
+volume_db = -12.0
+pitch_scale = 0.99
+
+[node name="CrowdB" type="AudioStreamPlayer" parent="AudioManager" unique_id=559857807]
+stream = ExtResource("26_crowd")
+volume_db = -12.0
+pitch_scale = 1.015
+
+[node name="BatHits" type="AudioStreamPlayer" parent="AudioManager" unique_id=1777854665]
+volume_db = -5.0
+max_polyphony = 4
+
+[node name="Mitt" type="AudioStreamPlayer" parent="AudioManager" unique_id=1879043773]
+volume_db = -15.0
+max_polyphony = 4
+
+[node name="Cheer" type="AudioStreamPlayer" parent="AudioManager" unique_id=585954184]
+stream = ExtResource("22_gt3je")
+volume_db = -12.0
+
+[node name="Whoa" type="AudioStreamPlayer" parent="AudioManager" unique_id=1240686899]
+stream = ExtResource("23_gt3je")
+volume_db = -16.0
+
+[node name="HitCheer" type="AudioStreamPlayer" parent="AudioManager" unique_id=1309725511]
+stream = ExtResource("25_hit_cheer")
+volume_db = -12.0
+
+[node name="HomeRunCheer" type="AudioStreamPlayer" parent="AudioManager" unique_id=1830378943]
+stream = ExtResource("24_home_cheer")
+volume_db = -12.0
+
+[node name="WhoaDelay" type="Timer" parent="AudioManager" unique_id=1650834370]
+wait_time = 0.14
+one_shot = true
+
+[node name="GoodTry" type="AudioStreamPlayer" parent="AudioManager" unique_id=582297526]
+stream = ExtResource("35_good_try")
+volume_db = -12.0
+
+[node name="BG" type="TextureRect" parent="." unique_id=1300540597]
+offset_right = 720.0
+offset_bottom = 720.0
+texture = ExtResource("1_jjgbg")
+
+[node name="Batting" type="Node2D" parent="." unique_id=229493052]
+script = ExtResource("10_pitch")
+
+[node name="Box" type="NinePatchRect" parent="Batting" unique_id=1813279590]
+offset_left = 42.0
+offset_top = 22.0
+offset_right = 690.0
+offset_bottom = 93.0
+texture = ExtResource("7_6bp64")
+patch_margin_left = 1
+patch_margin_top = 20
+patch_margin_right = 2
+patch_margin_bottom = 2
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Label" type="Label" parent="Batting/Box" unique_id=2048263088]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = -1.0
+offset_right = 300.0
+offset_bottom = 38.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.24313726, 0.24313726, 0.24313726, 1)
+theme_override_fonts/font = ExtResource("5_k12tt")
+theme_override_font_sizes/font_size = 24
+text = "BATTING"
+horizontal_alignment = 1
+
+[node name="Batter" type="AnimatedSprite2D" parent="Batting" unique_id=912968745]
+position = Vector2(74, 73)
+sprite_frames = SubResource("SpriteFrames_7k868")
+animation = &"swing"
+autoplay = "idle"
+frame = 8
+frame_progress = 1.0
+
+[node name="Pitcher" type="AnimatedSprite2D" parent="Batting" unique_id=452920928]
+position = Vector2(660, 71)
+sprite_frames = SubResource("SpriteFrames_21xkr")
+animation = &"pitch"
+autoplay = "idle"
+frame = 3
+
+[node name="Mound" type="Sprite2D" parent="Batting" unique_id=499643135]
+position = Vector2(656, 89)
+texture = ExtResource("8_ynf5e")
+
+[node name="BallArea" type="Control" parent="Batting" unique_id=178986133]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = 43.0
+offset_top = 50.0
+offset_right = 686.0
+offset_bottom = 91.0
+mouse_filter = 2
+
+[node name="Ball" type="Sprite2D" parent="Batting/BallArea" unique_id=1878096656]
+visible = false
+texture = ExtResource("11_ball")
+
+[node name="Score" type="Control" parent="." unique_id=567247044]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 163.0
+offset_top = 44.0
+offset_right = 163.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="Box" type="NinePatchRect" parent="Score" unique_id=590391041]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 528.0
+offset_right = 313.0
+offset_bottom = 649.0
+texture = ExtResource("7_6bp64")
+patch_margin_left = 1
+patch_margin_top = 20
+patch_margin_right = 2
+patch_margin_bottom = 2
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Label" type="Label" parent="Score/Box" unique_id=395574413]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -323.0
+offset_right = 323.0
+offset_bottom = 14.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.243, 0.243, 0.243, 1)
+theme_override_fonts/font = ExtResource("5_k12tt")
+theme_override_font_sizes/font_size = 24
+text = "SCORE"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="Score/Box" unique_id=1011502324]
+anchors_preset = 0
+offset_left = 97.0
+offset_top = 7.0
+offset_right = 137.0
+offset_bottom = 47.0
+
+[node name="Base1" type="Sprite2D" parent="Score/Box/Control" unique_id=1884512658]
+position = Vector2(171, 62)
+texture = ExtResource("12_fdnlq")
+
+[node name="Base2" type="Sprite2D" parent="Score/Box/Control" unique_id=23334676]
+position = Vector2(147, 38)
+texture = ExtResource("12_fdnlq")
+
+[node name="Base3" type="Sprite2D" parent="Score/Box/Control" unique_id=439081319]
+position = Vector2(123, 62)
+texture = ExtResource("12_fdnlq")
+
+[node name="Out1" type="Sprite2D" parent="Score/Box/Control" unique_id=2131346297]
+position = Vector2(133, 86)
+texture = ExtResource("13_jkdf5")
+
+[node name="Out2" type="Sprite2D" parent="Score/Box/Control" unique_id=1890717424]
+position = Vector2(147, 86)
+texture = ExtResource("13_jkdf5")
+
+[node name="Out3" type="Sprite2D" parent="Score/Box/Control" unique_id=2067330418]
+position = Vector2(161, 86)
+texture = ExtResource("13_jkdf5")
+
+[node name="Balls + Strikes" type="Label" parent="Score/Box/Control" unique_id=966871234]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 98.0
+offset_top = 89.0
+offset_right = 158.0
+offset_bottom = 112.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.243, 0.243, 0.243, 1)
+theme_override_fonts/font = ExtResource("5_k12tt")
+theme_override_font_sizes/font_size = 24
+text = "0--0"
+horizontal_alignment = 1
+
+[node name="Scorecard" type="TextureRect" parent="Score/Box" unique_id=491957526]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 47.0
+offset_right = 159.0
+offset_bottom = 102.0
+texture = ExtResource("21_kqrg6")
+
+[node name="AwayScore1" type="Label" parent="Score/Box" unique_id=1615206041]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -84.0
+offset_top = 51.0
+offset_right = -24.0
+offset_bottom = 102.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.243, 0.243, 0.243, 1)
+theme_override_fonts/font = ExtResource("5_k12tt")
+theme_override_font_sizes/font_size = 24
+text = "0"
+horizontal_alignment = 1
+
+[node name="HomeScore1" type="Label" parent="Score/Box" unique_id=1875217724]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -84.0
+offset_top = 78.0
+offset_right = -24.0
+offset_bottom = 129.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.243, 0.243, 0.243, 1)
+theme_override_fonts/font = ExtResource("5_k12tt")
+theme_override_font_sizes/font_size = 24
+text = "0"
+horizontal_alignment = 1
+
+[node name="AwayScore2" type="Label" parent="Score/Box" unique_id=1480621170]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -60.0
+offset_top = 51.0
+offset_bottom = 102.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.243, 0.243, 0.243, 1)
+theme_override_fonts/font = ExtResource("5_k12tt")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+
+[node name="HomeScore2" type="Label" parent="Score/Box" unique_id=318099431]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -60.0
+offset_top = 78.0
+offset_bottom = 129.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.243, 0.243, 0.243, 1)
+theme_override_fonts/font = ExtResource("5_k12tt")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+
+[node name="AwayScore3" type="Label" parent="Score/Box" unique_id=334302380]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -31.0
+offset_top = 52.0
+offset_right = 29.0
+offset_bottom = 103.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.243, 0.243, 0.243, 1)
+theme_override_fonts/font = ExtResource("5_k12tt")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+
+[node name="HomeScore3" type="Label" parent="Score/Box" unique_id=595800173]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -31.0
+offset_top = 79.0
+offset_right = 29.0
+offset_bottom = 130.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.243, 0.243, 0.243, 1)
+theme_override_fonts/font = ExtResource("5_k12tt")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+
+[node name="InningsLabel" type="Label" parent="Score/Box" unique_id=1210863815]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -349.0
+offset_top = 30.0
+offset_right = 297.0
+offset_bottom = 54.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.243, 0.243, 0.243, 1)
+theme_override_fonts/font = ExtResource("5_k12tt")
+theme_override_font_sizes/font_size = 24
+text = "INNINGS"
+horizontal_alignment = 1
+
+[node name="Arrow" type="TextureRect" parent="Score/Box" unique_id=1427677927]
+layout_mode = 0
+offset_left = 649.0
+offset_top = -204.0
+offset_right = 689.0
+offset_bottom = -164.0
+texture = ExtResource("29_e08e2")
+stretch_mode = 2
+
+[node name="Field" type="NinePatchRect" parent="." unique_id=2031478945]
+offset_left = 41.0
+offset_top = 165.0
+offset_right = 418.0
+offset_bottom = 484.0
+texture = ExtResource("7_6bp64")
+patch_margin_left = 1
+patch_margin_top = 20
+patch_margin_right = 2
+patch_margin_bottom = 2
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Label" type="Label" parent="Field" unique_id=472539897]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = -1.0
+offset_right = 300.0
+offset_bottom = 38.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.24313726, 0.24313726, 0.24313726, 1)
+theme_override_fonts/font = ExtResource("5_k12tt")
+theme_override_font_sizes/font_size = 24
+text = "FIELD"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Field" unique_id=529016265]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 27.0
+offset_right = 365.0
+offset_bottom = 315.0
+texture = ExtResource("14_jkdf5")
+script = ExtResource("15_field")
+
+[node name="PhaseStatus" type="Label" parent="." unique_id=1827434557]
+offset_left = 71.0
+offset_top = 491.0
+offset_right = 448.0
+offset_bottom = 517.0
+theme_override_colors/font_color = Color(0.243, 0.243, 0.243, 1)
+theme_override_fonts/font = ExtResource("3_344ge")
+theme_override_font_sizes/font_size = 12
+
+[node name="Run" type="NinePatchRect" parent="." unique_id=1764718110]
+offset_left = 98.0
+offset_top = 126.0
+offset_right = 170.0
+offset_bottom = 666.0
+texture = ExtResource("7_6bp64")
+patch_margin_left = 1
+patch_margin_top = 20
+patch_margin_right = 2
+patch_margin_bottom = 2
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource("18_run")
+
+[node name="Label" type="Label" parent="Run" unique_id=464007841]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = -1.0
+offset_right = 300.0
+offset_bottom = 38.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.24313726, 0.24313726, 0.24313726, 1)
+theme_override_fonts/font = ExtResource("5_k12tt")
+theme_override_font_sizes/font_size = 24
+text = "RUN
+"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Run" unique_id=1594140384]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 20.0
+offset_right = 55.0
+offset_bottom = 537.0
+texture = ExtResource("17_h1bgf")
+stretch_mode = 3
+
+[node name="Shot Call" type="NinePatchRect" parent="." unique_id=1564040565]
+offset_left = 272.0
+offset_top = 98.0
+offset_right = 511.0
+offset_bottom = 120.0
+texture = ExtResource("19_hibaj")
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 2
+patch_margin_bottom = 2
+script = ExtResource("19_announcements")
+
+[node name="Label" type="Label" parent="Shot Call" unique_id=610982897]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -261.5
+offset_right = 261.0
+offset_bottom = 38.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.24313726, 0.24313726, 0.24313726, 1)
+theme_override_fonts/font = ExtResource("5_k12tt")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+
+[node name="SwingInput" type="NinePatchRect" parent="." unique_id=725029194]
+offset_left = 58.0
+offset_top = 97.0
+offset_right = 191.0
+offset_bottom = 178.0
+texture = ExtResource("7_6bp64")
+patch_margin_left = 1
+patch_margin_top = 20
+patch_margin_right = 2
+patch_margin_bottom = 2
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Label" type="Label" parent="SwingInput" unique_id=599519548]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = -1.0
+offset_right = 300.0
+offset_bottom = 38.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.24313726, 0.24313726, 0.24313726, 1)
+theme_override_fonts/font = ExtResource("5_k12tt")
+theme_override_font_sizes/font_size = 24
+text = "SWING"
+horizontal_alignment = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SwingInput" unique_id=1029072957]
+position = Vector2(65, 40)
+sprite_frames = SubResource("SpriteFrames_kltya")
+autoplay = "default"
+frame_progress = 0.6514512
+
+[node name="SpaceButton" type="TouchScreenButton" parent="SwingInput/AnimatedSprite2D" unique_id=2070587690]
+position = Vector2(0, 10)
+shape = SubResource("RectangleShape2D_swing_input")
+action = "Space"
+
+[node name="RunInput" type="NinePatchRect" parent="." unique_id=1751597493]
+offset_left = 464.0
+offset_top = 522.0
+offset_right = 713.0
+offset_bottom = 655.0
+texture = ExtResource("7_6bp64")
+patch_margin_left = 1
+patch_margin_top = 20
+patch_margin_right = 2
+patch_margin_bottom = 2
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Label" type="Label" parent="RunInput" unique_id=29396376]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = -1.0
+offset_right = 300.0
+offset_bottom = 38.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.24313726, 0.24313726, 0.24313726, 1)
+theme_override_fonts/font = ExtResource("5_k12tt")
+theme_override_font_sizes/font_size = 24
+text = "RUN"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="RunInput" unique_id=526502313]
+layout_mode = 0
+offset_left = -20.0
+offset_top = 11.0
+offset_right = 268.0
+offset_bottom = 155.0
+texture = ExtResource("28_6vcvc")
+
+[node name="LeftButton" type="TouchScreenButton" parent="RunInput/TextureRect" unique_id=117530126]
+position = Vector2(54, 64)
+shape = SubResource("RectangleShape2D_arrow_input")
+action = "Left"
+
+[node name="SpaceButton" type="TouchScreenButton" parent="RunInput/TextureRect" unique_id=979878853]
+position = Vector2(144, 64)
+shape = SubResource("RectangleShape2D_space_input")
+action = "Space"
+
+[node name="RightButton" type="TouchScreenButton" parent="RunInput/TextureRect" unique_id=353454088]
+position = Vector2(234, 64)
+shape = SubResource("RectangleShape2D_arrow_input")
+action = "Right"
+
+[node name="Pitching" type="Node2D" parent="." unique_id=393350724]
+script = ExtResource("34_player_pitch")
+
+[node name="Box" type="NinePatchRect" parent="Pitching" unique_id=521649683]
+offset_left = 42.0
+offset_top = 22.0
+offset_right = 690.0
+offset_bottom = 96.0
+texture = ExtResource("7_6bp64")
+patch_margin_left = 1
+patch_margin_top = 20
+patch_margin_right = 2
+patch_margin_bottom = 2
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Label" type="Label" parent="Pitching/Box" unique_id=1950475476]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = -1.0
+offset_right = 300.0
+offset_bottom = 38.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.24313726, 0.24313726, 0.24313726, 1)
+theme_override_fonts/font = ExtResource("5_k12tt")
+theme_override_font_sizes/font_size = 24
+text = "PITCHING"
+horizontal_alignment = 1
+
+[node name="Batter" type="AnimatedSprite2D" parent="Pitching" unique_id=905800986]
+position = Vector2(661, 77)
+sprite_frames = SubResource("SpriteFrames_7k868")
+animation = &"swing"
+autoplay = "idle"
+frame = 8
+frame_progress = 1.0
+flip_h = true
+
+[node name="Pitcher" type="AnimatedSprite2D" parent="Pitching" unique_id=585348553]
+position = Vector2(75, 73)
+sprite_frames = SubResource("SpriteFrames_21xkr")
+animation = &"pitch"
+autoplay = "idle"
+frame = 3
+flip_h = true
+
+[node name="Mound" type="Sprite2D" parent="Pitching" unique_id=718263750]
+position = Vector2(66, 91)
+texture = ExtResource("8_ynf5e")
+
+[node name="BallArea" type="Control" parent="Pitching" unique_id=1529953084]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = 49.0
+offset_top = 50.0
+offset_right = 683.0
+offset_bottom = 91.0
+mouse_filter = 2
+
+[node name="Ball" type="Sprite2D" parent="Pitching/BallArea" unique_id=319508544]
+visible = false
+texture = ExtResource("11_ball")
+
+[node name="PitchSelect" type="NinePatchRect" parent="Pitching" unique_id=902876334]
+offset_left = 244.0
+offset_top = 44.0
+offset_right = 483.0
+offset_bottom = 66.0
+texture = ExtResource("19_hibaj")
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="Label" type="Label" parent="Pitching/PitchSelect" unique_id=229943963]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -68.5
+offset_top = -11.0
+offset_right = 62.5
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.24313726, 0.24313726, 0.24313726, 1)
+theme_override_fonts/font = ExtResource("5_k12tt")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+
+[node name="LArrow" type="TextureRect" parent="Pitching/PitchSelect" unique_id=723803401]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 4.0
+offset_right = 51.0
+offset_bottom = 44.0
+texture = ExtResource("29_e08e2")
+stretch_mode = 2
+
+[node name="RArrow" type="TextureRect" parent="Pitching/PitchSelect" unique_id=1076822663]
+layout_mode = 0
+offset_left = 222.0
+offset_top = 4.0
+offset_right = 262.0
+offset_bottom = 44.0
+texture = ExtResource("30_neg2b")
+stretch_mode = 2
+
+[node name="PitchSlider" type="NinePatchRect" parent="Pitching" unique_id=1618147230]
+offset_left = 244.0
+offset_top = 69.0
+offset_right = 483.0
+offset_bottom = 91.0
+texture = ExtResource("19_hibaj")
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="Line" type="TextureRect" parent="Pitching/PitchSlider" unique_id=1564727637]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 5.0
+offset_right = 204.0
+offset_bottom = 45.0
+texture = ExtResource("31_r33sp")
+stretch_mode = 2
+
+[node name="Slider" type="TextureRect" parent="Pitching/PitchSlider" unique_id=709322509]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 5.0
+offset_right = 207.0
+offset_bottom = 45.0
+texture = ExtResource("32_hdf80")
+stretch_mode = 2
+
+[node name="Arrow" type="TextureRect" parent="Pitching/PitchSlider" unique_id=740292029]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 4.0
+offset_right = 308.0
+offset_bottom = 44.0
+texture = ExtResource("33_jwpg7")
+stretch_mode = 2
+
+[node name="PitchInput" type="NinePatchRect" parent="." unique_id=598600517]
+offset_left = 431.0
+offset_top = 132.0
+offset_right = 698.0
+offset_bottom = 299.0
+texture = ExtResource("7_6bp64")
+patch_margin_left = 1
+patch_margin_top = 20
+patch_margin_right = 2
+patch_margin_bottom = 2
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Label" type="Label" parent="PitchInput" unique_id=1501092598]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = -1.0
+offset_right = 300.0
+offset_bottom = 38.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.24313726, 0.24313726, 0.24313726, 1)
+theme_override_fonts/font = ExtResource("5_k12tt")
+theme_override_font_sizes/font_size = 24
+text = "PITCH"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="PitchInput" unique_id=561676890]
+layout_mode = 0
+offset_left = -10.0
+offset_top = 12.0
+offset_right = 278.0
+offset_bottom = 156.0
+texture = ExtResource("36_hdf80")
+
+[node name="LeftButton" type="TouchScreenButton" parent="PitchInput/TextureRect" unique_id=1365523201]
+position = Vector2(54, 64)
+shape = SubResource("RectangleShape2D_arrow_input")
+action = "Left"
+
+[node name="SpaceButton" type="TouchScreenButton" parent="PitchInput/TextureRect" unique_id=225426173]
+position = Vector2(144, 64)
+shape = SubResource("RectangleShape2D_space_input")
+action = "Space"
+
+[node name="RightButton" type="TouchScreenButton" parent="PitchInput/TextureRect" unique_id=1609776619]
+position = Vector2(234, 64)
+shape = SubResource("RectangleShape2D_arrow_input")
+action = "Right"
+
+[node name="Catching" type="NinePatchRect" parent="." unique_id=1478770339]
+offset_left = 443.0
+offset_top = 156.0
+offset_right = 699.0
+offset_bottom = 513.0
+texture = ExtResource("7_6bp64")
+patch_margin_left = 1
+patch_margin_top = 20
+patch_margin_right = 2
+patch_margin_bottom = 2
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource("39_catch")
+
+[node name="Label" type="Label" parent="Catching" unique_id=1517693733]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -299.5
+offset_top = -1.0
+offset_right = 300.5
+offset_bottom = 38.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.24313726, 0.24313726, 0.24313726, 1)
+theme_override_fonts/font = ExtResource("5_k12tt")
+theme_override_font_sizes/font_size = 24
+text = "CATCHING"
+horizontal_alignment = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Catching" unique_id=463834854]
+position = Vector2(132, 308)
+sprite_frames = SubResource("SpriteFrames_s8vy0")
+
+[node name="TextureRect" type="TextureRect" parent="Catching" unique_id=1747906770]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 302.0
+offset_right = 255.0
+offset_bottom = 328.0
+texture = ExtResource("38_k2e45")
+
+[node name="Ball" type="Sprite2D" parent="Catching" unique_id=16742896]
+visible = false
+z_index = 2
+texture = ExtResource("11_ball")
+
+[node name="LeftButton" type="TouchScreenButton" parent="Catching" unique_id=1488465756]
+position = Vector2(64, 180)
+shape = SubResource("RectangleShape2D_catch_input")
+action = "Left"
+
+[node name="RightButton" type="TouchScreenButton" parent="Catching" unique_id=306156149]
+position = Vector2(192, 180)
+shape = SubResource("RectangleShape2D_catch_input")
+action = "Right"
+
+[node name="CatchInput" type="NinePatchRect" parent="." unique_id=1152954064]
+offset_left = 484.0
+offset_top = 568.0
+offset_right = 698.0
+offset_bottom = 677.0
+texture = ExtResource("7_6bp64")
+patch_margin_left = 1
+patch_margin_top = 20
+patch_margin_right = 2
+patch_margin_bottom = 2
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Label" type="Label" parent="CatchInput" unique_id=421855381]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = -1.0
+offset_right = 300.0
+offset_bottom = 38.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.24313726, 0.24313726, 0.24313726, 1)
+theme_override_fonts/font = ExtResource("5_k12tt")
+theme_override_font_sizes/font_size = 24
+text = "CATCHING"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="CatchInput" unique_id=1164568798]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 33.0
+offset_right = 174.0
+offset_bottom = 81.0
+texture = ExtResource("40_aqgau")
+
+[node name="LeftButton" type="TouchScreenButton" parent="CatchInput/TextureRect" unique_id=858123855]
+position = Vector2(28, 24)
+shape = SubResource("RectangleShape2D_catch_arrow_input")
+action = "Left"
+
+[node name="RightButton" type="TouchScreenButton" parent="CatchInput/TextureRect" unique_id=1048198713]
+position = Vector2(106, 24)
+shape = SubResource("RectangleShape2D_catch_arrow_input")
+action = "Right"
+
+[node name="Passing" type="Node2D" parent="." unique_id=2143450971]
+script = ExtResource("43_pass")
+
+[node name="Box" type="NinePatchRect" parent="Passing" unique_id=383962588]
+show_behind_parent = true
+offset_left = 42.0
+offset_top = 22.0
+offset_right = 690.0
+offset_bottom = 96.0
+texture = ExtResource("7_6bp64")
+patch_margin_left = 1
+patch_margin_top = 20
+patch_margin_right = 2
+patch_margin_bottom = 2
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Label" type="Label" parent="Passing/Box" unique_id=1166015023]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = -1.0
+offset_right = 300.0
+offset_bottom = 38.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.24313726, 0.24313726, 0.24313726, 1)
+theme_override_fonts/font = ExtResource("5_k12tt")
+theme_override_font_sizes/font_size = 24
+text = "PASSING"
+horizontal_alignment = 1
+
+[node name="SpaceButton" type="TouchScreenButton" parent="Passing/Box" unique_id=682478618]
+position = Vector2(324, 50)
+shape = SubResource("RectangleShape2D_pass_input")
+action = "Space"
+
+[node name="Catcher" type="AnimatedSprite2D" parent="Passing" unique_id=110700444]
+position = Vector2(661, 77)
+sprite_frames = SubResource("SpriteFrames_v2nl5")
+autoplay = "default"
+
+[node name="Passer" type="AnimatedSprite2D" parent="Passing" unique_id=462496850]
+position = Vector2(168, 76)
+sprite_frames = SubResource("SpriteFrames_bv80c")
+flip_h = true
+
+[node name="BallArea" type="Control" parent="Passing" unique_id=1913388186]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = 49.0
+offset_top = 50.0
+offset_right = 683.0
+offset_bottom = 91.0
+mouse_filter = 2
+
+[node name="Ball" type="Sprite2D" parent="Passing/BallArea" unique_id=330742690]
+visible = false
+texture = ExtResource("11_ball")
+
+[node name="PitchSelect" type="NinePatchRect" parent="Passing" unique_id=1823218104]
+visible = false
+offset_left = 244.0
+offset_top = 44.0
+offset_right = 483.0
+offset_bottom = 66.0
+texture = ExtResource("19_hibaj")
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="Label" type="Label" parent="Passing/PitchSelect" unique_id=887291881]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -68.5
+offset_top = -11.0
+offset_right = 62.5
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.24313726, 0.24313726, 0.24313726, 1)
+theme_override_fonts/font = ExtResource("5_k12tt")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+
+[node name="LArrow" type="TextureRect" parent="Passing/PitchSelect" unique_id=877924837]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 4.0
+offset_right = 51.0
+offset_bottom = 44.0
+texture = ExtResource("29_e08e2")
+stretch_mode = 2
+
+[node name="RArrow" type="TextureRect" parent="Passing/PitchSelect" unique_id=1742607857]
+layout_mode = 0
+offset_left = 222.0
+offset_top = 4.0
+offset_right = 262.0
+offset_bottom = 44.0
+texture = ExtResource("30_neg2b")
+stretch_mode = 2
+
+[node name="PitchSlider" type="NinePatchRect" parent="Passing" unique_id=252005751]
+visible = false
+offset_left = 244.0
+offset_top = 69.0
+offset_right = 483.0
+offset_bottom = 91.0
+texture = ExtResource("19_hibaj")
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="Line" type="TextureRect" parent="Passing/PitchSlider" unique_id=409316861]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 5.0
+offset_right = 204.0
+offset_bottom = 45.0
+texture = ExtResource("31_r33sp")
+stretch_mode = 2
+
+[node name="Slider" type="TextureRect" parent="Passing/PitchSlider" unique_id=1128107314]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 5.0
+offset_right = 207.0
+offset_bottom = 45.0
+texture = ExtResource("32_hdf80")
+stretch_mode = 2
+
+[node name="Arrow" type="TextureRect" parent="Passing/PitchSlider" unique_id=510741832]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 4.0
+offset_right = 308.0
+offset_bottom = 44.0
+texture = ExtResource("33_jwpg7")
+stretch_mode = 2
+
+[node name="PassInput" type="NinePatchRect" parent="." unique_id=398446177]
+offset_left = 504.0
+offset_top = 519.0
+offset_right = 679.0
+offset_bottom = 628.0
+texture = ExtResource("7_6bp64")
+patch_margin_left = 1
+patch_margin_top = 20
+patch_margin_right = 2
+patch_margin_bottom = 2
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Label" type="Label" parent="PassInput" unique_id=818796227]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = -1.0
+offset_right = 300.0
+offset_bottom = 38.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.24313726, 0.24313726, 0.24313726, 1)
+theme_override_fonts/font = ExtResource("5_k12tt")
+theme_override_font_sizes/font_size = 24
+text = "PASSING"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="PassInput" unique_id=750604188]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 31.0
+offset_right = 173.0
+offset_bottom = 101.0
+texture = ExtResource("44_pass_input")
+stretch_mode = 2
+
+[node name="SpaceButton" type="TouchScreenButton" parent="PassInput/TextureRect" unique_id=1220829592]
+position = Vector2(58, 24)
+shape = SubResource("RectangleShape2D_swing_input")
+action = "Space"
+
+[node name="RestartButton" type="TextureRect" parent="." unique_id=867949715]
+z_index = 10
+offset_left = 22.0
+offset_top = 647.0
+offset_right = 62.0
+offset_bottom = 687.0
+texture = ExtResource("46_s8vy0")
+stretch_mode = 3
+
+[node name="TouchButton" type="TouchScreenButton" parent="RestartButton" unique_id=102854734]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_utility_button")
+action = "R"
+
+[node name="FullscreenButton" type="TextureRect" parent="." unique_id=267479588]
+z_index = 10
+offset_left = 22.0
+offset_top = 603.0
+offset_right = 62.0
+offset_bottom = 643.0
+texture = ExtResource("47_jut3y")
+stretch_mode = 3
+
+[node name="TouchButton" type="TouchScreenButton" parent="FullscreenButton" unique_id=482468417]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_utility_button")
+action = "F"
